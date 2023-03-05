@@ -1,3 +1,4 @@
+#This script allows changing and adding element types in a monoatomic LAMMPS structure file. Requires Atomic Simulation Environment (ASE) library.
 import numpy as np
 from ase.data import *
 import sys
