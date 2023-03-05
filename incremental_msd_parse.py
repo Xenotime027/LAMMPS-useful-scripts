@@ -1,5 +1,12 @@
-#This code is very specific to my problem
-#It depends on the parameters of the LAMMPS simulations you used, such as the timestep value
+#This script calculates the incremental mean square difference of atomic positions from a LAMMPS trajectory file. 
+#Please use with discretion as this code is specific to my problem (depends on the timestep value and other LAMMPS simulation parameters). 
+#The results are saved in a separate file.
+
+#Input arguments:
+#1. Path of the trajectory file
+#2. Path for exporting
+#3. (Optional) interval value, 1 corresponds to no frames being skipped, n means MSE is calculated every n frames.
+
 #Please use this if you know what you are doing
 #Calculates the mean square difference from a LAMMPS trajectory file from each timestep 
 #by comparing the atomic positions across two different frames
