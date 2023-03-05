@@ -1,3 +1,9 @@
+#This script summarises the useful ASE functions to create nanoparticles of different shapes: icosahedral, 
+#(regularly) truncated octahedral, non-truncated octahedral, Marks decahedral, and non-truncated decahedral. 
+#The input arguments for each function correspond to the size parameter. Larger values correspond to larger nanoparticles.
+#Use with discretion, as the number of atoms may increase exponentially.
+#I recommend the maximum values of n, p, q, or r to be around 10-15, unless you know what you are doing.
+
 import ase
 import numpy as np
 import pandas as pd
