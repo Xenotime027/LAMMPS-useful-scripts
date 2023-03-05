@@ -1,3 +1,6 @@
+#This is a specific script. Use with discretion. The main takeaway from this script is the delienated code (inside the ### section), 
+#which introduces the logic behind discrete steps to create a stacking fault (to maintain "good" translational symmetry) along the 112 crystallographic plane.
+
 #This dictionary contains: the keys: alloy name, the items (in order): composition of the first element, number of elements, string of elements
 gitpar = [3.6215814614347517, 3.5845818198019868, 3.5965846604277805]
 alloy_list = {"MnNi": ["0.6", 2, "Mn,Ni"], "FeCo": ["0.5", 2, "Fe,Co"], "Cantor": ["0.2", 5, "Ni,Fe,Co,Cr,Mn"]}
