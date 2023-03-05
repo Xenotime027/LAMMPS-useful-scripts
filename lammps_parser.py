@@ -1,4 +1,6 @@
-#Read / parses the LAMMPS log file.
+#This script allows parsing a LAMMPS log data and saves it into a Pandas Dataframe, containing columns and rows.
+#Each column corresponds to the calculated properties and each row is the every instance of calculation over the given simulation time.
+
 class lammps_data:
     def __init__(self, file):
         import pandas as pd
