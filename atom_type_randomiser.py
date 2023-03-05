@@ -1,3 +1,12 @@
+#This script creates randomised alloy (random solid solution) for a given LAMMPS data file. Requires Ovito and ASE libraries. 
+#The user sets the elements and their concentration values, which will be normalised.
+#This script takes multiple inputs
+#1. Input file location
+#2. Export file location
+#3. Tolerance rate = 0: gives a buffer on the simulation box (>0 for simulating particles suspended in vacuum)
+#4. Optional: name of elements, default Ni-Fe-Co-Cr-Mn
+#5. Optional: concentration of each element, default: equiatomic (1/n_elem)
+
 class MemberError(Exception):
     pass
   
@@ -10,13 +19,6 @@ import sys
 import ase
 from ase.data import atomic_names, atomic_masses, vdw_radii, atomic_numbers
 
-#This script takes multiple inputs
-#1. Input file location
-#2. Export file location
-#3. Tolerance rate = 0: gives a buffer on the simulation box (>0 for simulating particles suspended in vacuum)
-#4. Optional: name of elements, default Ni-Fe-Co-Cr-Mn
-#5. Optional: concentration of each element, default: equiatomic (1/n_elem)
-
 input_file = str(sys.argv[1])
 export_name = str(sys.argv[2])
 try:
@@ -25,8 +27,6 @@ except:
     tol_rate = 0
     print(f"Default tolerance rate is used {tol_rate}.\n")
 
-
-    
 try:
     names = np.array(sys.argv[4].split(" "))
     n_elem = len(names)
