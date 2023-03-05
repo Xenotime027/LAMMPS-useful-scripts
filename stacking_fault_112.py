@@ -32,8 +32,9 @@ for num, i in enumerate(alloy_list):
     
     #################################################################################################################################################
     #alpha_liste: This list specifies how much shift (along the x-axis) is supplied to the stacking fault code. 
+    #The shift distance is motivated by crystallographic reasons to maintain appropriate translational symmetry.
     #The factor sqrt 6 corresponds to the 112 crystallographic direction
-    alpha_liste = np.linspace(0, 1.5*a/np.sqrt(6), 10)
+    alpha_liste = np.linspace(0, 1.5*a/np.sqrt(6), 10) #creates 10 steps along the x-axis direction, multiplied by a calculated distance
     
     for num2, j in enumerate(alpha_liste):
         j = np.round(j, 5) #amount of shift, rounded to 5 decimal places to avoid floating point error
