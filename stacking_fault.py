@@ -1,3 +1,10 @@
+#A script to create stacking fault (https://en.wikipedia.org/wiki/Stacking_fault) by shifting two atomic planes.
+#The shift is given by the user in Angstroms. Requires Ovito.
+#Arguments:
+#1. Path of the structure file
+#2. Path for the export
+#3. Value of the shift (Angstrom)
+
 import ovito
 from ovito.io import import_file, export_file
 from ovito.data import *
